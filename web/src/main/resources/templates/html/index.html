@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>myApp Home</title>
+    <!-- Bootstrap -->
+    <link href="/static/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <style>
+        div.textblock {
+            background-color: #eee;
+            padding: 5px;
+        }
+        hr{ border-top: 1px solid #c7c7c7; }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h1>My Applications Home</h1>
+            <hr/>
+            <div class="textblock">
+                <h2>Overview</h2>
+                <hr/>
+                Here is collection of my works. They are technical interview tests, and implementation of concepts in my brain.
+            </div>
+            <br/>
+            <div class="textblock">
+                <h2>Technical design</h2>
+                <hr/>
+                All applications are mainly developed by Java, publish to GitHub, and run on AWS.<br>
+                They also can run on local machine by simple maven spring-boot command "mvn spring-boot:run". If you have installed Java SDK 8 and Maven.<br/>
+                Following technologies have been used
+                <ul>
+                    <li>springboot</li>
+                    <li>angularjs</li>
+                    <li>spring-integration</li>
+                </ul>
+                Following non-functional requirements are considered
+                <ul>
+                    <li>Authorization</li>
+                    <li>Authentication</li>
+                    <li>Testability</li>
+                    <li>Integrability</li>
+                    <li>configuration management</li>
+                    <li>transaction management</li>
+                    <li>support management</li>
+                </ul>
+            </div>
+            <br/>
+            <div class="textblock">
+                <h2>Source hosting @ Github</h2>
+                <hr/>
+                <a href="https://github.com/wilson-yc-wong/myApps">https://github.com/wilson-yc-wong/myApps</a>
+            </div>
+            <br/>
+            <div class="textblock">
+                <h2>Deployment</h2>
+                <hr/>
+                <h3>AWS</h3>
+                <a href="http://myallapps.ddns.net/">http://myallapps.ddns.net/</a>
+                <h3>Localhost</h3>
+                To run my apps on localhost, execute maven command "mvn spring-boot:run -P local"<br/>
+                Then you can visit it by "http://localhost:8080/"
+                <h3>Credential</h3>
+                Login by testing user account: user@myapp.net/password
+            </div>
+            <br/>
+            <div class="textblock">
+                <h2>Applications</h2>
+                <hr/>
+                <ul>
+                    <li><a href="/app/ranking">Website Ranking</a><br/>
+                        This is a web sites ranking application.<br/>
+                        features:
+                        <ul>
+                            <li>Integrates with external web api to retrieve web sites visit counts</li>
+                            <li>Watches and load local CSV file, which contains web site filter list</li>
+                            <li>Provides web GUI to search and display top 5 ranking web sites with most visit count</li>
+                        </ul>
+                        Following testing has been setup. So you can see result by search date range 2018-01-01 ~ 2018-01-10
+                        <div style="background-color:#dfdfdf">
+                            date|file|visits<br/>
+                            2018-01-01|google.com|1<br/>
+                            2018-01-01|google.com|100<br/>
+                            2018-01-01|amazon.com|2<br/>
+                            2018-01-03|yahoo.com|2<br/>
+                            2018-01-04|amazon.com|3<br/>
+                            2018-01-05|ibm.com|4<br/>
+                            2018-01-06|hsbc.com|5<br/>
+                            2018-01-07|cnn.com|10<br/>
+                            2018-01-01|facebook.com|1000<br/>
+                            2016-03-13|google.com|1000<br/>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <br/>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+</body>
+</html>

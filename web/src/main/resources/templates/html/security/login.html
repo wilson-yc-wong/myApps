@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>my application</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- font -->
+    <link href="/static/fontawesome/css/fontawesome-all.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="/static/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .box{
+          margin: 0 5px 5px 0;
+        }
+
+        input {
+          border: 0;
+          outline: 0;
+          width: 200px;
+          color: #555555;
+          padding-left: 30px;
+          border-bottom: 1px solid #bbb;
+        }
+
+        input:hover, input:focus {
+          border-bottom: 1px solid #1ba1e2;
+        }
+
+        input:hover + i {
+          color: #1ba1e2;
+        }
+
+        input:focus + i {
+          color: #1ba1e2;
+        }
+
+        button {
+          border: 0;
+          outline: 0;
+          height: 20px;
+          color: #555555;
+          border-top: 1px solid #aaa;
+          border-left: 1px solid #aaa;
+        }
+
+        button:hover, button:focus {
+          border-top: 1px solid #1ba1e2;
+          border-left: 1px solid #1ba1e2;
+          color: #1ba1e2;
+        }
+
+        button:hover .fa-lock-open {
+          color: #1ba1e2;
+        }
+
+        ::placeholder {
+            color: #aaa;
+        }
+
+        input:focus::placeholder {
+            color: white;
+        }
+
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #aaa;
+        }
+
+        input:focus::-ms-input-placeholder {
+            color: white;
+        }
+
+        ::-ms-input-placeholder { /* Microsoft Edge */
+            color: #aaa;
+        }
+
+        input:focus::-ms-input-placeholder {
+            color: white;
+        }
+
+        i {
+            float: left;
+            margin-left: 6px;
+            margin-top: -18px;
+            position: relative;
+            color: #aaa;
+            z-index: 2;
+        }
+
+        i:hover, i:focus {
+          color: #1ba1e2;
+        }
+
+        .container {
+            position: fixed;
+            top: 30%;
+            left: 50%;
+            margin-left: -100px;
+        }
+
+        .button-icon {
+            float: left;
+            margin-left: -2px;
+            margin-top: 4px;
+            position: relative
+            color: #aaa;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+<div th:if="${param.error}">
+    Invalid username and password.
+</div>
+<form th:action="@{/login}" method="post">
+    <div class="container" align="center">
+        <div class="row">
+            <div class="col-md-2 box">
+                <input type="email" id="username" name="username" placeholder="e-mail">
+                <i class="fas fa-envelope"></i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 box">
+                <input type="password" id="password" name="password" placeholder="password">
+                <i class="fas fa-key"></i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 box">
+                <button type="submit">
+                    <i class="button-icon fas fa-lock-open"></i>&nbsp;&nbsp;Sign in
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+
+</body>
+</html>
